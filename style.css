@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@1,500&family=Montserrat:ital,wght@0,500;1,700&family=Outfit:wght@500&family=Poppins:ital,wght@0,400;0,600;1,200&family=Raleway:wght@200;300&family=Roboto:ital,wght@0,300;0,700;1,100;1,300;1,400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+
+body {
+    background-color: var(--Violet);
+    background-image: url(images/bg-desktop.svg);
+    object-fit: contain;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 100%;
+    height: 600px;
+    /* border: 1px solid red; */
+
+}
+
+.logo {
+    width: 200px;
+    margin-left: 55px;
+    margin-top: 20px;
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+.logo2 {
+    width: 600px;
+    position: absolute;
+    top: 17%;
+    left: 5%;
+}
+
+.text {
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    right: 9%;
+    top: 23%;
+    gap: 20px;
+    padding: 10px;
+}
+
+.text h1 {
+    font-size: 35px;
+    letter-spacing: 4px;
+    /* text-align: center; */
+    color: #fff;
+    line-height: 52px;
+        font-family: 'poppins',sans-serif;
+
+}
+
+.text p {
+    color: #fff;
+    word-spacing: 7px;
+    margin-left: 5px;
+    margin-top: 20px;
+    line-height: 22px;
+}
+
+
+.btn {
+    padding: 15px 60px;
+    margin-left: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    color: var(--Violet);
+    margin-top: 20px;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: var(--Soft-Magenta);
+}
+
+.fb {
+
+    border-radius: 50%;
+    position: absolute;
+    right: 17%;
+    bottom: 5%;
+    border: 1px solid white;
+    padding: 5px;
+
+}
+
+.fb:hover{
+border:  1px solid var(--Soft-Magenta);    
+}
+.fa-brands{
+    color: #fff;
+}
+.fa-brands:hover {
+    color: var(--Soft-Magenta);
+
+}
+
+.tw {
+    position: absolute;
+    right: 9%;
+    bottom: 5%;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 5px;
+
+}
+.tw:hover{
+    border:  1px solid var(--Soft-Magenta);    
+    }
+
+.ins {
+    position: absolute;
+    right: 1%;
+    bottom: 5%;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 5px;
+
+}
+.ins:hover{
+    border:  1px solid var(--Soft-Magenta);    
+    }
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Styles for devices with a maximum width of 480px */
+@media (max-width: 480px) {
+    /* CSS rules for mobile devices */
+    body{
+        margin: 25px;
+    }
+    .container{ 
+        margin: 20px;
+    }
+    .text{
+        width: 500px;
+        height: 450px;
+        /* border: 1px sold red; */
+        /* background-color: aqua; */
+        position: absolute;
+        top: 80%;
+        left: 15%;
+        padding: 20px;
+        align-items: center;
+    }
+    .text p{
+        font-size: 20px;
+        word-spacing: 2px;
+        line-height: 30px;
+    }
+    .btn{
+        margin-left: 100px;
+        padding: 15px 95px;
+        font-size: 20px;
+    }
+    .fb{
+        position: absolute;
+        right: 62%;
+        padding: 10px;
+    
+    }
+    .tw{
+        position: absolute;
+        right: 50%;
+        padding: 10px;
+
+    
+    }
+    .ins{
+        position: absolute;
+        right: 38%;
+        padding: 10px;
+
+    
+    }
+    
+  }
+  
+  /* Styles for devices with a maximum width of 768px */
+  @media (max-width: 768px) {
+    /* CSS rules for tablets and smaller screens */
+  }
+  
+  /* Styles for devices with a maximum width of 992px */
+  @media (max-width: 992px) {
+    /* CSS rules for tablets and small desktop screens */
+  }
+  
