@@ -1,72 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@1,500&family=Montserrat:ital,wght@0,500;1,700&family=Outfit:wght@500&family=Poppins:ital,wght@0,400;0,600;1,200&family=Raleway:wght@200;300&family=Roboto:ital,wght@0,300;0,700;1,100;1,300;1,400&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 :root {
     --Violet: hsl(257, 40%, 49%);
     --Soft-Magenta: hsl(300, 69%, 71%);
+    --padding-inline-section: 20px
 }
 
 
 body {
     background-color: var(--Violet);
-    background-image: url(images/bg-desktop.svg);
+    /* background-image: url(images/bg-desktop.svg); */
     object-fit: contain;
     flex-wrap: wrap;
+    font-family: 'poppins', sans-serif;
+
+    /* flex-wrap: wrap; */
+
+}
+
+.header_section {}
+
+.flex {
+    display: flex;
+    justify-content: center;
 }
 
 .container {
+    max-width: 1480px;
+    margin-inline: auto;
+    padding-inline: var(--padding-inline-section);
+    overflow: hidden;
+    margin-top: 40px;
+
+
+    flex-wrap: wrap;
+
+}
+
+header {
+    padding: 50px var(--padding-inline-section) 0;
+}
+
+.left_side img {
     width: 100%;
-    height: 600px;
-    /* border: 1px solid red; */
 
 }
 
-.logo {
-    width: 200px;
-    margin-left: 55px;
+.right_side {
+    max-width: 40vw;
+    padding: 30px 20px 0px 60px;
+}
+
+.right_side h1 {
+    font-size: 60px;
+    color: #fff;
+    line-height: 90px;
+}
+
+.right_side p {
+    color: rgb(212, 201, 201);
+    font-size: 22px;
+    line-height: 30px;
+    margin-right: 30px;
     margin-top: 20px;
-    width: 200px;
-    margin-bottom: 30px;
+    display: flex;
 }
 
-.logo2 {
-    width: 600px;
-    position: absolute;
-    top: 17%;
-    left: 5%;
-}
-
-.text {
-    width: 500px;
-    height: 450px;
-    position: absolute;
-    right: 9%;
-    top: 23%;
+.link {
+    display: flex;
+    justify-content: end;
+    margin-top: 90px;
+    padding: 10px 20px;
     gap: 20px;
-    padding: 10px;
+    align-items: center;
 }
-
-.text h1 {
-    font-size: 35px;
-    letter-spacing: 4px;
-    /* text-align: center; */
-    color: #fff;
-    line-height: 52px;
-        font-family: 'poppins',sans-serif;
-
-}
-
-.text p {
-    color: #fff;
-    word-spacing: 7px;
-    margin-left: 5px;
-    margin-top: 20px;
-    line-height: 22px;
-}
-
 
 .btn {
     padding: 15px 60px;
@@ -82,53 +95,32 @@ body {
     background-color: var(--Soft-Magenta);
 }
 
-.fb {
-
-    border-radius: 50%;
-    position: absolute;
-    right: 17%;
-    bottom: 5%;
-    border: 1px solid white;
-    padding: 5px;
-
-}
-
-.fb:hover{
-border:  1px solid var(--Soft-Magenta);    
-}
-.fa-brands{
-    color: #fff;
-}
-.fa-brands:hover {
-    color: var(--Soft-Magenta);
-
-}
-
-.tw {
-    position: absolute;
-    right: 9%;
-    bottom: 5%;
-    border-radius: 50%;
-    border: 1px solid white;
-    padding: 5px;
-
-}
-.tw:hover{
-    border:  1px solid var(--Soft-Magenta);    
-    }
-
+.fb,
+.tw,
 .ins {
-    position: absolute;
-    right: 1%;
-    bottom: 5%;
     border-radius: 50%;
     border: 1px solid white;
-    padding: 5px;
-
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
 }
-.ins:hover{
-    border:  1px solid var(--Soft-Magenta);    
-    }
+
+.fb:hover {
+    border: 1px solid var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+.tw:hover {
+    border: 1px solid var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+.ins:hover {
+    border: 1px solid var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+
 
 .attribution {
     font-size: 11px;
@@ -140,65 +132,49 @@ border:  1px solid var(--Soft-Magenta);
 }
 
 /* Styles for devices with a maximum width of 480px */
-@media (max-width: 480px) {
-    /* CSS rules for mobile devices */
-    body{
-        margin: 25px;
+@media screen and (max-width:768px) {
+
+    .header_section {
+        flex-direction: column;
+
     }
-    .container{ 
-        margin: 20px;
+
+    .right_side {
+        max-width: 100vw;
+        padding: 0px 0px 0px 0px;
+        font-size: 10px;
     }
-    .text{
-        width: 500px;
-        height: 450px;
-        /* border: 1px sold red; */
-        /* background-color: aqua; */
-        position: absolute;
-        top: 80%;
-        left: 15%;
-        padding: 20px;
-        align-items: center;
+
+    .right_side h1 {
+        font-size: 35px;
+        color: #fff;
+        line-height: normal;
+        text-align: center;
+
     }
-    .text p{
-        font-size: 20px;
-        word-spacing: 2px;
-        line-height: 30px;
+
+    .right_side p {
+        text-align: center;
+        font-size: 23px;
     }
-    .btn{
+
+    .btn {
+        padding: 15px 80px;
         margin-left: 100px;
-        padding: 15px 95px;
-        font-size: 20px;
+        margin-top: 20px;
     }
-    .fb{
-        position: absolute;
-        right: 62%;
-        padding: 10px;
-    
-    }
-    .tw{
-        position: absolute;
-        right: 50%;
-        padding: 10px;
 
-    
+    .link {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 30px;
     }
-    .ins{
-        position: absolute;
-        right: 38%;
-        padding: 10px;
 
-    
+    .nav img {
+        width: 40%;
+        margin-bottom: 30px;
     }
-    
-  }
-  
-  /* Styles for devices with a maximum width of 768px */
-  @media (max-width: 768px) {
-    /* CSS rules for tablets and smaller screens */
-  }
-  
-  /* Styles for devices with a maximum width of 992px */
-  @media (max-width: 992px) {
-    /* CSS rules for tablets and small desktop screens */
-  }
-  
+}
